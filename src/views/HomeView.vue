@@ -1,5 +1,6 @@
 <script setup>
 import WhatIDo from '@/components/WhatIDo.vue'
+import Projects from '@/components/Projects.vue'
 </script>
 
 <template>
@@ -44,6 +45,9 @@ import WhatIDo from '@/components/WhatIDo.vue'
 
     <!-- What I Do Section -->
     <WhatIDo />
+
+    <!-- Projects Section -->
+    <Projects />
   </main>
 </template>
 
