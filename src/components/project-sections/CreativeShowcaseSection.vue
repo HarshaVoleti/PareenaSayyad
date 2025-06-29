@@ -29,22 +29,36 @@ const props = defineProps({
 <style scoped>
 .creative-showcase-section {
   margin: 4rem 0;
-  padding: 3rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 0 3rem;
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
 .section-title {
-  font-family: 'Handlee', cursive;
-  font-size: 2rem;
-  color: #000;
-  margin-bottom: 1rem;
+  font-family: 'Handlee';
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 2rem 0;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 201, 240, 1);
+  transform: translateY(-50%) rotate(-1deg);
+  z-index: -1;
+  border-radius: 2px;
 }
 
 .section-text {
@@ -57,19 +71,23 @@ const props = defineProps({
 
 .creative-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: 1000px;
 }
 
 .creative-item {
+  border: 2px solid #e5e7eb;
   border-radius: 8px;
+  padding: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .creative-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .creative-item img {
@@ -80,29 +98,29 @@ const props = defineProps({
 
 /* Masonry-like layout for different sized images */
 .creative-item:nth-child(2n) {
-  transform: translateY(20px);
+  transform: none;
 }
 
 .creative-item:nth-child(3n) {
-  transform: translateY(-10px);
+  transform: none;
 }
 
 @media (max-width: 768px) {
   .creative-showcase-section {
-    padding: 2rem 1rem;
+    padding: 0 2rem;
   }
   
   .creative-gallery {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .creative-item:nth-child(2n),
-  .creative-item:nth-child(3n) {
-    transform: none;
+  .creative-item {
+    padding: 0.75rem;
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 28px;
   }
 }
 </style>

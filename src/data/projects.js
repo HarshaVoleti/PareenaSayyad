@@ -2,7 +2,7 @@ export const projectDetailsList = [
   {
     id: 'laundry-loop',
     title: 'LaundryLoop: Mobile App',
-    mainImage: 'https://picsum.photos/800/600?random=1',
+    mainImage: '/src/assets/laundryapp/main.png',
     sections: [
       {
         type: 'text-block',
@@ -72,14 +72,15 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
         title: 'Final Designs',
         content: '',
         screens: [
-          'https://i.imgur.com/7oFCXYC.png',
-          'https://i.imgur.com/nJYDW6r.png',
-          'https://i.imgur.com/fYWz6Ep.png',
-          'https://i.imgur.com/FrrW2YK.png',
-          'https://i.imgur.com/81wXtFi.png',
-          'https://i.imgur.com/JjoZgpb.png',
-          'https://i.imgur.com/sqTmeJG.png',
-          'https://i.imgur.com/qM8R9CV.png'
+          '/src/assets/laundryapp/ss1.png',
+          '/src/assets/laundryapp/ss2.png',
+          '/src/assets/laundryapp/ss3.png',
+          '/src/assets/laundryapp/ss4.png',
+          '/src/assets/laundryapp/ss5.png',
+          '/src/assets/laundryapp/ss6.png',
+          '/src/assets/laundryapp/ss7.png',
+          '/src/assets/laundryapp/ss8.png',
+          '/src/assets/laundryapp/ss9.png'
         ]
       },
       {
@@ -90,7 +91,6 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
 + The outcome was a mobile app concept that feels smart, simple, and purposeful — addressing real pain-points while encouraging more mindful habits. This project deepened my understanding of end-to-end product design, from research and ideation to interface and systems thinking.`
       }
     ],
-
     results: {
       metrics: [
         { label: 'User Satisfaction', value: '85%', increase: true },
@@ -103,11 +103,10 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
         role: 'Product Manager, LaundryLoop'
       }
     },
-
     nextProject: 'compedge',
     prevProject: null
-    },
-    {
+  },
+  {
     id: 'compedge',
     title: 'CompEdge: Landing Page',
     mainImage: '/src/assets/compedge/main.png',
@@ -115,7 +114,7 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
       {
         type: 'text-block',
         title: 'Context',
-        content: `CompEdge is a competitive intelligence platform that helps businesses track, analyze, and benchmark their competitors’ marketing strategies. This landing page was designed to communicate the product’s value to B2B decision-makers — clearly, quickly, and persuasively.`
+        content: `CompEdge is a competitive intelligence platform that helps businesses track, analyze, and benchmark their competitors' marketing strategies. This landing page was designed to communicate the product's value to B2B decision-makers — clearly, quickly, and persuasively.`
       },
       {
         type: 'text-block',
@@ -127,7 +126,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
       {
         type: 'text-block',
         title: 'Project Goal',
-        content: `The goal was to design a high-conversion landing page that builds credibility, explains the product’s key benefits, and drives demo requests — all within a scannable, conversion-optimized experience.`
+        content: `The goal was to design a high-conversion landing page that builds credibility, explains the product's key benefits, and drives demo requests — all within a scannable, conversion-optimized experience.`
       },
       {
         type: 'text-block',
@@ -155,7 +154,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
       {
         type: 'text-block',
         title: 'Reflection',
-        content: `This project taught me how to design for clarity in complexity. Simplifying an AI product’s message for a non-technical but fast-moving audience pushed me to think about visual hierarchy, copy, flow, and how to build instant trust through UI. It was also a great exercise in storytelling through layout making every scroll feel intentional.`
+        content: `This project taught me how to design for clarity in complexity. Simplifying an AI product's message for a non-technical but fast-moving audience pushed me to think about visual hierarchy, copy, flow, and how to build instant trust through UI. It was also a great exercise in storytelling through layout making every scroll feel intentional.`
       }
     ],
     nextProject: 'bloomora',
@@ -222,7 +221,59 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
         role: 'Brand Director, Bloomora'
       }
     },
-    nextProject: null,
+    nextProject: 'ritva',
     prevProject: 'compedge'
+  },
+  {
+    id: 'ritva',
+    title: 'Ritva MH: Social Media Creatives',
+    mainImage: '/src/assets/ritva/main.png',
+    sections: [
+      {
+        type: 'text-block',
+        title: 'Context',
+        content: `Ritva MH is a women's health initiative focused on awareness, accessibility, and support. During my time as Creative Head, I led the design direction across digital campaigns, primarily focused on social media storytelling, education, and engagement.`
+      },
+      {
+        type: 'creative-showcase',
+        title: 'Design Gallery',
+        creatives: [
+          '/src/assets/ritva/ss1.png',
+          '/src/assets/ritva/ss2.png',
+          '/src/assets/ritva/ss3.png',
+          '/src/assets/ritva/ss4.png',
+          '/src/assets/ritva/ss5.png',
+          '/src/assets/ritva/ss6.png',
+          '/src/assets/ritva/ss7.png',
+          '/src/assets/ritva/ss8.png',
+          '/src/assets/ritva/ss9.png',
+          '/src/assets/ritva/ss10.png',
+          '/src/assets/ritva/ss11.png',
+          '/src/assets/ritva/ss12.png',
+          '/src/assets/ritva/ss13.png',
+          '/src/assets/ritva/ss14.png',
+          '/src/assets/ritva/ss15.png'
+        ]
+      },
+      {
+        type: 'text-block',
+        title: 'Reflection',
+        content: `This project deepened my understanding of how visual design can support education and social change. It taught me how to design with empathy, make complex topics accessible, and maintain brand consistency across evolving campaigns. More than anything, it reminded me that design isn't just aesthetic - it's emotional context.`
+      }
+    ],
+    results: {
+      metrics: [
+        { label: 'Social Engagement', value: '78%', increase: true },
+        { label: 'Educational Reach', value: '120K+', increase: true },
+        { label: 'Campaign Effectiveness', value: '91%', increase: true }
+      ],
+      testimonial: {
+        quote: 'The creative work beautifully balances education with engagement. Every design feels purposeful and connects with our audience on a deeper level.',
+        author: 'Dr. Priya Sharma',
+        role: 'Founder, Ritva MH'
+      }
+    },
+    nextProject: null,
+    prevProject: 'bloomora'
   }
 ];

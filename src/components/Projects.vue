@@ -46,7 +46,7 @@ const navigateToProject = (projectId) => {
           
           <div class="project-card" @click="navigateToProject('compedge')">
             <div class="project-image">
-              <img src="https://i.imgur.com/6Y3WdZ0.png" alt="Compedge Landing Page" />
+              <img src="/src/assets/compedge/main.png" alt="Compedge Landing Page" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Compedge: Landing page</h3>
@@ -56,7 +56,7 @@ const navigateToProject = (projectId) => {
           
           <div class="project-card" @click="navigateToProject('bloomora')">
             <div class="project-image">
-              <img src="https://picsum.photos/400/400?random=3" alt="Bloomora Bath Bomb Shop" />
+              <img src="/src/assets/bloomora/main.png" alt="Bloomora Bath Bomb Shop" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Bloomora: Bath Bomb Shop</h3>
@@ -64,9 +64,9 @@ const navigateToProject = (projectId) => {
             </div>
           </div>
           
-          <div class="project-card" @click="navigateToProject('ritva-mh')">
+          <div class="project-card" @click="navigateToProject('ritva')">
             <div class="project-image">
-              <img src="https://picsum.photos/400/400?random=4" alt="Ritva MH Creatives" />
+              <img src="/src/assets/ritva/main.png" alt="Ritva MH Creatives" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Ritva MH: Creatives</h3>

@@ -12,6 +12,7 @@ import FeatureListSection from '@/components/project-sections/FeatureListSection
 import WhyUsSection from '@/components/project-sections/WhyUsSection.vue'
 import TestimonialCardsSection from '@/components/project-sections/TestimonialCardsSection.vue'
 import StatsSection from '@/components/project-sections/StatsSection.vue'
+import CreativeShowcaseSection from '@/components/project-sections/CreativeShowcaseSection.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -29,7 +30,8 @@ const sectionComponents = {
   'feature-list': FeatureListSection,
   'why-us': WhyUsSection,
   'testimonial-cards': TestimonialCardsSection,
-  'stats': StatsSection
+  'stats': StatsSection,
+  'creative-showcase': CreativeShowcaseSection
 }
 
 // Computed properties
