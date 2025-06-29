@@ -2,6 +2,7 @@
 import WhatIDo from '@/components/WhatIDo.vue'
 import Projects from '@/components/Projects.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
+import Contact from '@/components/Contact.vue'
 </script>
 
 <template>
@@ -52,6 +53,9 @@ import WorkExperience from '@/components/WorkExperience.vue'
 
     <!-- Work Experience Section -->
     <WorkExperience />
+
+    <!-- Contact Section -->
+    <Contact />
   </main>
 </template>
 
