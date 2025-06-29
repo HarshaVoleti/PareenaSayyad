@@ -39,7 +39,7 @@ A beautiful, paper-inspired portfolio website built with Vue.js, showcasing a un
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/HarshaVoleti/PareenaSayyad.git
    cd portfolio-app
    ```
 
@@ -190,7 +190,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👩‍💻 Author
 
 **Pareena Sayyad**
-- Portfolio: [Your Portfolio URL]
+- Portfolio: [https://pareenasayyad.netlify.app/](https://pareenasayyad.netlify.app/)
+- GitHub: [https://github.com/HarshaVoleti/PareenaSayyad](https://github.com/HarshaVoleti/PareenaSayyad)
 - LinkedIn: [Your LinkedIn]
 - Email: [Your Email]
 
