@@ -39,7 +39,7 @@ const scrollToContact = () => {
         <!-- Tagline with highlight -->
         <div class="tagline">
           <p class="tagline-text">
-            I <span class="highlight">turn wir</span>eframes into wow frames.
+            I <span class="highlight">turn wireframes</span> into wow frames.
           </p>
         </div>
       </div>
@@ -209,7 +209,7 @@ const scrollToContact = () => {
 }
 
 .description-text {
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: #2c3e50;
   margin-bottom: 2rem;
@@ -243,16 +243,33 @@ const scrollToContact = () => {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 3rem;
+  }
+  
+  .tagline-text {
+    font-size: 48px;
+  }
+  
+  .hero-name {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 968px) {
   .hero-section {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    min-height: auto;
+    padding: 2rem 0;
   }
   
   .profile-section {
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
   }
   
   .curved-arrow {
@@ -266,10 +283,20 @@ const scrollToContact = () => {
   
   .hero-name {
     font-size: 2rem;
+    transform: rotate(-3deg) translateY(0px);
   }
   
   .tagline-text {
-    font-size: 1.5rem;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  
+  .hero-right {
+    order: -1;
+  }
+  
+  .description {
+    max-width: 500px;
   }
 }
 
@@ -280,6 +307,7 @@ const scrollToContact = () => {
   
   .hero-section {
     gap: 2rem;
+    padding: 1rem 0;
   }
   
   .profile-picture {
@@ -287,25 +315,58 @@ const scrollToContact = () => {
     height: 120px;
   }
   
-  .picture-placeholder span {
-    font-size: 2rem;
-  }
-  
   .hero-name {
     font-size: 1.8rem;
   }
   
   .tagline-text {
-    font-size: 1.3rem;
+    font-size: 28px;
+    line-height: 1.3;
   }
   
   .description-text {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
   }
   
   .hire-me-btn {
     font-size: 20px;
     padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero-name {
+    font-size: 1.5rem;
+  }
+  
+  .tagline-text {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  
+  .description-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .hire-me-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  .highlight::before {
+    height: 35%;
   }
 }
 </style>
