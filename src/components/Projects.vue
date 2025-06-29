@@ -312,11 +312,22 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .content-layout {
+    gap: 3rem;
+  }
+  
+  .projects-grid {
+    max-width: 700px;
+  }
+}
+
 @media (max-width: 968px) {
   .content-layout {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    padding: 0 1rem;
   }
   
   .curved-arrow {
@@ -325,6 +336,7 @@
   
   .section-header {
     margin-left: 0;
+    margin-top: 2rem;
     text-align: center;
   }
   
@@ -339,7 +351,17 @@
   }
   
   .projects-grid {
-    max-width: 500px;
+    max-width: 600px;
+    gap: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+  
+  .project-tag {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -348,17 +370,108 @@
     padding: 2rem 0;
   }
   
+  .content-layout {
+    padding: 0 1rem;
+  }
+  
   .section-title {
     font-size: 2rem;
   }
   
+  .section-text {
+    font-size: 20px;
+  }
+  
   .projects-grid {
-    gap: 1.5rem;
-    max-width: 400px;
+    gap: 1rem;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .project-card {
+    aspect-ratio: 1;
+    min-height: 200px;
+  }
+  
+  .project-title {
+    font-size: 0.9rem;
+    width: 45%;
+  }
+  
+  .project-tag {
+    font-size: 11px;
+    padding: 0.3rem 0.6rem;
+    max-width: 50%;
+  }
+  
+  .project-content {
+    padding: 0.8rem;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    aspect-ratio: 1.2;
+    min-height: 280px;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+    width: 50%;
+  }
+  
+  .project-tag {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+    max-width: 45%;
+  }
+  
+  .project-content {
+    padding: 1rem;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 1.5rem 0;
+  }
+  
+  .content-layout {
+    padding: 0 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-text {
+    font-size: 18px;
+  }
+  
+  .projects-grid {
+    max-width: 300px;
+    gap: 1rem;
+  }
+  
+  .project-card {
+    min-height: 250px;
+  }
+  
+  .project-title {
     font-size: 1rem;
+  }
+  
+  .project-tag {
+    font-size: 11px;
+    padding: 0.3rem 0.6rem;
   }
 }
 </style>
