@@ -3,6 +3,7 @@ import WhatIDo from '@/components/WhatIDo.vue'
 import Projects from '@/components/Projects.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -56,13 +57,16 @@ import Contact from '@/components/Contact.vue'
 
     <!-- Contact Section -->
     <Contact />
+
+    <!-- Footer Section -->
+    <Footer />
   </main>
 </template>
 
 <style scoped>
 .portfolio-main {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
 }
 
 .hero-section {
@@ -261,7 +265,7 @@ import Contact from '@/components/Contact.vue'
 
 @media (max-width: 768px) {
   .portfolio-main {
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
   }
   
   .hero-section {

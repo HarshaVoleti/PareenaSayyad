@@ -171,7 +171,7 @@ import { RouterView } from 'vue-router'
 .paper-content {
   position: relative;
   z-index: 3;
-  padding: 0px 48px 48px 80px;
+  padding: 0px 48px 0px 80px;
   min-height: calc(100vh - 120px);
 }
 
@@ -202,7 +202,7 @@ import { RouterView } from 'vue-router'
   }
   
   .paper-content {
-    padding: 0px 32px 32px 60px;
+    padding: 0px 32px 0px 60px;
     min-height: calc(100vh - 140px);
   }
 }
@@ -227,7 +227,7 @@ import { RouterView } from 'vue-router'
   }
   
   .paper-content {
-    padding: 0px 24px 24px 50px;
+    padding: 0px 24px 0px 50px;
   }
 }
 
