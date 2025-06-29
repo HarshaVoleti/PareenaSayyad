@@ -24,7 +24,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="content-layout">
       <div class="left-side">
         <div class="section-header">

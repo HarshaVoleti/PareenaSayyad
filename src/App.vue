@@ -1,5 +1,25 @@
 <script setup>
 import { RouterView } from 'vue-router'
+
+const scrollToContact = () => {
+  const contactSection = document.querySelector('.contact-section')
+  if (contactSection) {
+    contactSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
+const scrollToProjects = () => {
+  const projectsSection = document.querySelector('#projects')
+  if (projectsSection) {
+    projectsSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 </script>
 
 <template>
@@ -21,8 +41,8 @@ import { RouterView } from 'vue-router'
         
         <div class="nav-links">
           <RouterLink to="/" class="nav-link">Home</RouterLink>
-          <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
-          <button class="hire-me-btn">Hire me</button>
+          <a href="#" class="nav-link" @click.prevent="scrollToProjects">Projects</a>
+          <button class="hire-me-btn" @click="scrollToContact">Hire me</button>
         </div>
       </nav>
       

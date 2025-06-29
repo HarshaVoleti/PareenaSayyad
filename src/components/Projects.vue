@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="projects-section">
+  <section id="projects" class="projects-section">
     <div class="content-layout">
       <div class="left-side">
         <div class="section-header">

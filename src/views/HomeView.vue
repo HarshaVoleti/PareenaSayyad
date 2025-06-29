@@ -4,6 +4,16 @@ import Projects from '@/components/Projects.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
+
+const scrollToContact = () => {
+  const contactSection = document.querySelector('.contact-section')
+  if (contactSection) {
+    contactSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 </script>
 
 <template>
@@ -41,7 +51,7 @@ import Footer from '@/components/Footer.vue'
             I design clean, usable, and strategic digital experiences, from ideation to execution.
           </p>
           
-          <button class="hire-me-btn">Hire me</button>
+          <button class="hire-me-btn" @click="scrollToContact">Hire me</button>
         </div>
       </div>
     </section>
