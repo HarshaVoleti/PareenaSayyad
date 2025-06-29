@@ -1,6 +1,7 @@
 <script setup>
 import WhatIDo from '@/components/WhatIDo.vue'
 import Projects from '@/components/Projects.vue'
+import WorkExperience from '@/components/WorkExperience.vue'
 </script>
 
 <template>
@@ -48,6 +49,9 @@ import Projects from '@/components/Projects.vue'
 
     <!-- Projects Section -->
     <Projects />
+
+    <!-- Work Experience Section -->
+    <WorkExperience />
   </main>
 </template>
 
