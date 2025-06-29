@@ -1,5 +1,5 @@
 <script setup>
-// Portfolio home page
+import WhatIDo from '@/components/WhatIDo.vue'
 </script>
 
 <template>
@@ -41,6 +41,9 @@
         </div>
       </div>
     </section>
+
+    <!-- What I Do Section -->
+    <WhatIDo />
   </main>
 </template>
 
