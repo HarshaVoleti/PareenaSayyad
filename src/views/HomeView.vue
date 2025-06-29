@@ -3,7 +3,6 @@ import WhatIDo from '@/components/WhatIDo.vue'
 import Projects from '@/components/Projects.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 import Contact from '@/components/Contact.vue'
-import Footer from '@/components/Footer.vue'
 
 const scrollToContact = () => {
   const contactSection = document.querySelector('.contact-section')
@@ -67,9 +66,6 @@ const scrollToContact = () => {
 
     <!-- Contact Section -->
     <Contact />
-
-    <!-- Footer Section -->
-    <Footer />
   </main>
 </template>
 

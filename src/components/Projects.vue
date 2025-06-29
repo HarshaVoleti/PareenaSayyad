@@ -1,5 +1,12 @@
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 // Projects section component
+const navigateToProject = (projectId) => {
+  router.push(`/projects/${projectId}`)
+}
 </script>
 
 <template>
@@ -27,9 +34,9 @@
       <div class="right-side">
         <!-- Projects grid 2x2 -->
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" @click="navigateToProject('laundry-loop')">
             <div class="project-image">
-              <img src="https://picsum.photos/400/400?random=1" alt="LaundryLoop Mobile App" />
+              <img src="/src/assets/laundryapp/main.png" alt="LaundryLoop Mobile App" />
             </div>
             <div class="project-content">
               <h3 class="project-title">LaundryLoop: Mobile app</h3>
@@ -37,9 +44,9 @@
             </div>
           </div>
           
-          <div class="project-card">
+          <div class="project-card" @click="navigateToProject('compedge')">
             <div class="project-image">
-              <img src="https://picsum.photos/400/400?random=2" alt="Compedge Landing Page" />
+              <img src="https://i.imgur.com/6Y3WdZ0.png" alt="Compedge Landing Page" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Compedge: Landing page</h3>
@@ -47,7 +54,7 @@
             </div>
           </div>
           
-          <div class="project-card">
+          <div class="project-card" @click="navigateToProject('bloomora')">
             <div class="project-image">
               <img src="https://picsum.photos/400/400?random=3" alt="Bloomora Bath Bomb Shop" />
             </div>
@@ -57,7 +64,7 @@
             </div>
           </div>
           
-          <div class="project-card">
+          <div class="project-card" @click="navigateToProject('ritva-mh')">
             <div class="project-image">
               <img src="https://picsum.photos/400/400?random=4" alt="Ritva MH Creatives" />
             </div>
@@ -184,6 +191,7 @@
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-card:hover {

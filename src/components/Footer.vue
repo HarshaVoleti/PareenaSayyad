@@ -15,13 +15,13 @@
         
         <div class="footer-right">
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="https://linkedin.com/in/pareena-sayyad" target="_blank" class="social-link">
               <span class="social-button">LinkedIn</span>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://behance.net/pareena-sayyad" target="_blank" class="social-link">
               <span class="social-button">Behance</span>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://instagram.com/pareena.sayyad" target="_blank" class="social-link">
               <span class="social-button">Instagram</span>
             </a>
           </div>
@@ -49,12 +49,14 @@
   right: -2rem;
   height: 3px;
   background: #000;
-  z-index: 1;
+  z-index: 0;
 }
 
 .footer-container {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -106,6 +108,8 @@
 .social-link {
   text-decoration: none;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .social-link:hover {
@@ -129,6 +133,7 @@
   transition: all 0.3s ease;
   position: relative;
   transform: rotate(-1deg);
+  pointer-events: all;
 }
 
 .social-button:hover {

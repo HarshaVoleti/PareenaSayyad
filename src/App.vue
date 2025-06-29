@@ -1,5 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import Footer from '@/components/Footer.vue'
 
 const scrollToContact = () => {
   const contactSection = document.querySelector('.contact-section')
@@ -50,6 +51,9 @@ const scrollToProjects = () => {
       <div class="paper-content">
         <RouterView />
       </div>
+      
+      <!-- Footer Section -->
+      <Footer />
     </div>
   </div>
 </template>
