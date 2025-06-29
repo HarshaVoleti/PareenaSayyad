@@ -158,7 +158,71 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
         content: `This project taught me how to design for clarity in complexity. Simplifying an AI product’s message for a non-technical but fast-moving audience pushed me to think about visual hierarchy, copy, flow, and how to build instant trust through UI. It was also a great exercise in storytelling through layout making every scroll feel intentional.`
       }
     ],
-    nextProject: null,
+    nextProject: 'bloomora',
     prevProject: 'laundry-loop'
+  },
+  {
+    id: 'bloomora',
+    title: 'Bloomora: Bath Bomb Site',
+    mainImage: '/src/assets/bloomora/main.png',
+    sections: [
+      {
+        type: 'text-block',
+        title: 'Context',
+        content: `Bloomora is a fictional bath bomb brand created for Dec 3 self-care lovers. This goal was to create vibrant, visually appealing pages that blends storytelling, aesthetic design, and playful copy all washed in zen with a vibe that feels relaxed conversations.`
+      },
+      {
+        type: 'text-block',
+        title: 'Problem Statement',
+        content: `Most skincare e-commerce pages feel either too clinical or too boring. This project was about creating a landing page that felt free and dreamy rich, casually conversational, and full of personality without losing clarity or flow.`
+      },
+      {
+        type: 'text-block',
+        title: 'Project Goal',
+        content: `To design a web-based landing page that captures attention, delivers a full brand experience, and makes it easy and fun for users to fall in love with the product and click "Add to Cart."`
+      },
+      {
+        type: 'text-block',
+        title: 'My Role',
+        content: `✨ UX/UI Designer - from wireframes to high-fidelity visuals
+✨ Copywriter - every word felt considered and on-vibe
+✨ Visual Branding - built the tone, color palette, and product personality
+✨ Creative Direction - ensured the vibe never missed`
+      },
+      {
+        type: 'text-block',
+        title: 'Target Audience',
+        content: `👩‍💼 Gen Z women (18-25)
+💎 Obsessed with self-care, skincare, and aesthetic packaging
+💫 Emotion-driven shoppers who buy based on vibe and mood
+🛁 Beauty influencers or mood, trend, and TikTok culture
+💕 Loves a brand with sales but "not OE at first"`
+      },
+      {
+        type: 'image-block',
+        title: 'Final Design',
+        content: '',
+        image: '/src/assets/bloomora/ss1.png'
+      },
+      {
+        type: 'text-block',
+        title: 'Reflection',
+        content: `This project was a deep dive into designing with love and aesthetic as UX tools. It taught me how important branding can UX support connection goals. I learned to create a layout that makes every creative and branding choice feel like a conversation. Good design doesn't have to feel corporate - it can be fun, feminine, and make you smile while still being smart, strategic, and conversion-focused.`
+      }
+    ],
+    results: {
+      metrics: [
+        { label: 'Visual Appeal', value: '95%', increase: true },
+        { label: 'Brand Recognition', value: '88%', increase: true },
+        { label: 'User Engagement', value: '92%', increase: true }
+      ],
+      testimonial: {
+        quote: 'The design perfectly captures our brand essence. It feels fresh, fun, and makes self-care look irresistible.',
+        author: 'Maya Chen',
+        role: 'Brand Director, Bloomora'
+      }
+    },
+    nextProject: null,
+    prevProject: 'compedge'
   }
 ];
