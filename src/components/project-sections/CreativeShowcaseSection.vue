@@ -59,7 +59,6 @@ const props = defineProps({
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  auto-rows: auto;
 }
 
 .creative-item {
