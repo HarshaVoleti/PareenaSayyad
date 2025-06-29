@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import config from '@/config.js'
 
 // Contact section component
 const formData = ref({
@@ -8,17 +9,83 @@ const formData = ref({
   project: ''
 })
 
-const handleSubmit = () => {
-  // Handle form submission here
-  console.log('Form submitted:', formData.value)
-  // You can add actual form submission logic here
-  alert('Thank you for your message! I\'ll get back to you soon.')
-  
-  // Reset form
-  formData.value = {
-    name: '',
-    email: '',
-    project: ''
+const isSubmitting = ref(false)
+const submitMessage = ref('')
+const submitSuccess = ref(false)
+
+const handleSubmit = async () => {
+  // Validate form
+  if (!formData.value.name || !formData.value.email || !formData.value.project) {
+    submitMessage.value = 'Please fill in all fields.'
+    submitSuccess.value = false
+    return
+  }
+
+  // Check field lengths
+  if (formData.value.name.length > config.form.maxNameLength) {
+    submitMessage.value = `Name must be less than ${config.form.maxNameLength} characters.`
+    submitSuccess.value = false
+    return
+  }
+
+  if (formData.value.email.length > config.form.maxEmailLength) {
+    submitMessage.value = `Email must be less than ${config.form.maxEmailLength} characters.`
+    submitSuccess.value = false
+    return
+  }
+
+  if (formData.value.project.length > config.form.maxProjectLength) {
+    submitMessage.value = `Project description must be less than ${config.form.maxProjectLength} characters.`
+    submitSuccess.value = false
+    return
+  }
+
+  isSubmitting.value = true
+  submitMessage.value = ''
+
+  try {
+    // Prepare form data for Google Sheets
+    const payload = {
+      name: formData.value.name.trim(),
+      email: formData.value.email.trim(),
+      project: formData.value.project.trim(),
+      timestamp: new Date().toISOString(),
+      source: 'Portfolio Website'
+    }
+
+    // Send to Google Sheets via Google Apps Script
+    const response = await fetch(config.googleScriptUrl, {
+      method: 'POST',
+      mode: 'no-cors', // Required for Google Apps Script
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload)
+    })
+
+    // Since we're using no-cors, we can't read the response
+    // But if we reach here without error, it likely succeeded
+    submitMessage.value = 'Thank you for your message! I\'ll get back to you soon. 🎉'
+    submitSuccess.value = true
+    
+    // Reset form after successful submission
+    formData.value = {
+      name: '',
+      email: '',
+      project: ''
+    }
+
+  } catch (error) {
+    console.error('Error submitting form:', error)
+    submitMessage.value = 'Sorry, there was an error sending your message. Please try again or contact me directly.'
+    submitSuccess.value = false
+  } finally {
+    isSubmitting.value = false
+    
+    // Clear message after configured duration
+    setTimeout(() => {
+      submitMessage.value = ''
+    }, config.form.successMessageDuration)
   }
 }
 </script>
@@ -58,6 +125,7 @@ const handleSubmit = () => {
                 class="form-input" 
                 placeholder="Enter name"
                 v-model="formData.name"
+                :maxlength="config.form.maxNameLength"
                 required
               />
             </div>
@@ -71,6 +139,7 @@ const handleSubmit = () => {
                 class="form-input" 
                 placeholder="Enter email"
                 v-model="formData.email"
+                :maxlength="config.form.maxEmailLength"
                 required
               />
             </div>
@@ -83,15 +152,31 @@ const handleSubmit = () => {
                 class="form-textarea" 
                 placeholder="What would you like to build together?"
                 v-model="formData.project"
+                :maxlength="config.form.maxProjectLength"
                 rows="4"
                 required
               ></textarea>
             </div>
 
             <div class="form-submit">
-              <button type="submit" class="submit-button">
-                Submit
+              <button 
+                type="submit" 
+                class="submit-button"
+                :disabled="isSubmitting"
+                :class="{ 'submitting': isSubmitting }"
+              >
+                <span v-if="!isSubmitting">Submit</span>
+                <span v-else>Sending...</span>
               </button>
+              
+              <!-- Success/Error Message -->
+              <div 
+                v-if="submitMessage" 
+                class="submit-message"
+                :class="{ 'success': submitSuccess, 'error': !submitSuccess }"
+              >
+                {{ submitMessage }}
+              </div>
             </div>
           </form>
         </div>
@@ -275,8 +360,10 @@ const handleSubmit = () => {
 
 .form-submit {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
 .submit-button {
@@ -290,16 +377,64 @@ const handleSubmit = () => {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  min-width: 120px;
 }
 
-.submit-button:hover {
+.submit-button:hover:not(:disabled) {
   background: #333;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.submit-button:active {
+.submit-button:active:not(:disabled) {
   transform: translateY(0);
+}
+
+.submit-button:disabled,
+.submit-button.submitting {
+  background: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-button.submitting {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.submit-message {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.submit-message.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #15803d;
+  border: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+.submit-message.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
