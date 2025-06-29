@@ -1,8 +1,10 @@
+import { images } from '@/assets/images.js'
+
 export const projectDetailsList = [
   {
     id: 'laundry-loop',
     title: 'LaundryLoop: Mobile App',
-    mainImage: '/src/assets/laundryapp/main.png',
+    mainImage: images.laundry.main,
     sections: [
       {
         type: 'text-block',
@@ -71,17 +73,7 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
         type: 'mobile-screens',
         title: 'Final Designs',
         content: '',
-        screens: [
-          '/src/assets/laundryapp/ss1.png',
-          '/src/assets/laundryapp/ss2.png',
-          '/src/assets/laundryapp/ss3.png',
-          '/src/assets/laundryapp/ss4.png',
-          '/src/assets/laundryapp/ss5.png',
-          '/src/assets/laundryapp/ss6.png',
-          '/src/assets/laundryapp/ss7.png',
-          '/src/assets/laundryapp/ss8.png',
-          '/src/assets/laundryapp/ss9.png'
-        ]
+        screens: images.laundry.screens
       },
       {
         type: 'text-block',
@@ -109,7 +101,7 @@ I also looked at existing apps in adjacent spaces (delivery, fashion, utility) t
   {
     id: 'compedge',
     title: 'CompEdge: Landing Page',
-    mainImage: '/src/assets/compedge/main.png',
+    mainImage: images.compedge.main,
     sections: [
       {
         type: 'text-block',
@@ -149,7 +141,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
         type: 'image-block',
         title: 'Final Design',
         content: '',
-        image: '/src/assets/compedge/ss1.png'
+        image: images.compedge.screens[0]
       },
       {
         type: 'text-block',
@@ -163,7 +155,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
   {
     id: 'bloomora',
     title: 'Bloomora: Bath Bomb Site',
-    mainImage: '/src/assets/bloomora/main.png',
+    mainImage: images.bloomora.main,
     sections: [
       {
         type: 'text-block',
@@ -201,7 +193,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
         type: 'image-block',
         title: 'Final Design',
         content: '',
-        image: '/src/assets/bloomora/ss1.png'
+        image: images.bloomora.screens[0]
       },
       {
         type: 'text-block',
@@ -227,7 +219,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
   {
     id: 'ritva',
     title: 'Ritva MH: Social Media Creatives',
-    mainImage: '/src/assets/ritva/main.png',
+    mainImage: images.ritva.main,
     sections: [
       {
         type: 'text-block',
@@ -237,23 +229,7 @@ The challenge: Design a landing page that makes this feel instantly valuable, cr
       {
         type: 'creative-showcase',
         title: 'Design Gallery',
-        creatives: [
-          '/src/assets/ritva/ss1.png',
-          '/src/assets/ritva/ss2.png',
-          '/src/assets/ritva/ss3.png',
-          '/src/assets/ritva/ss4.png',
-          '/src/assets/ritva/ss5.png',
-          '/src/assets/ritva/ss6.png',
-          '/src/assets/ritva/ss7.png',
-          '/src/assets/ritva/ss8.png',
-          '/src/assets/ritva/ss9.png',
-          '/src/assets/ritva/ss10.png',
-          '/src/assets/ritva/ss11.png',
-          '/src/assets/ritva/ss12.png',
-          '/src/assets/ritva/ss13.png',
-          '/src/assets/ritva/ss14.png',
-          '/src/assets/ritva/ss15.png'
-        ]
+        creatives: images.ritva.screens
       },
       {
         type: 'text-block',

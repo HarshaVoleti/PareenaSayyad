@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { images } from '@/assets/images.js'
 
 const router = useRouter()
 
@@ -36,7 +37,7 @@ const navigateToProject = (projectId) => {
         <div class="projects-grid">
           <div class="project-card" @click="navigateToProject('laundry-loop')">
             <div class="project-image">
-              <img src="/src/assets/laundryapp/main.png" alt="LaundryLoop Mobile App" />
+              <img :src="images.laundry.main" alt="LaundryLoop Mobile App" />
             </div>
             <div class="project-content">
               <h3 class="project-title">LaundryLoop: Mobile app</h3>
@@ -46,7 +47,7 @@ const navigateToProject = (projectId) => {
           
           <div class="project-card" @click="navigateToProject('compedge')">
             <div class="project-image">
-              <img src="/src/assets/compedge/main.png" alt="Compedge Landing Page" />
+              <img :src="images.compedge.main" alt="Compedge Landing Page" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Compedge: Landing page</h3>
@@ -56,7 +57,7 @@ const navigateToProject = (projectId) => {
           
           <div class="project-card" @click="navigateToProject('bloomora')">
             <div class="project-image">
-              <img src="/src/assets/bloomora/main.png" alt="Bloomora Bath Bomb Shop" />
+              <img :src="images.bloomora.main" alt="Bloomora Bath Bomb Shop" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Bloomora: Bath Bomb Shop</h3>
@@ -66,7 +67,7 @@ const navigateToProject = (projectId) => {
           
           <div class="project-card" @click="navigateToProject('ritva')">
             <div class="project-image">
-              <img src="/src/assets/ritva/main.png" alt="Ritva MH Creatives" />
+              <img :src="images.ritva.main" alt="Ritva MH Creatives" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Ritva MH: Creatives</h3>
